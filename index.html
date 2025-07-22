@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Princess, My Wifey, My Love 💕</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe4e1);
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.8rem;
+      color: #d6336c;
+      margin-bottom: 1rem;
+    }
+    .countdown {
+      font-size: 1.3rem;
+      margin: 10px 0 30px;
+      color: #e74c3c;
+    }
+    .love-letter {
+      background-color: #ffffffcc;
+      border-radius: 16px;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 650px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    audio {
+      margin-top: 30px;
+    }
+    .quote {
+      font-style: italic;
+      font-size: 1rem;
+      color: #8e44ad;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Princess, My Wifey, My Love 💕</h1>
+  <p class="countdown" id="countdown">Countdown loading...</p>
+
+  <div class="love-letter">
+    <p>I am the luckiest person in this world because I have you. Today is your birthday, but the best gift is you — forever in my life.</p>
+    <p>Thank you, bhgwan, for blessing me with someone as kind, as lovely, and as precious as you. Happy birthday budiiiiiii 🥹💖</p>
+    <p>I promise — I will always be yours. Sincerely. Truly. Forever. I love you more than words can say.</p>
+    <p class="quote">"In a world full of stars, you're my moon. Constant. Bright. Mine."</p>
+    <p>— With all my heart,<br><strong>Sanuu</strong></p>
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="https://dl.sndup.net/htqq/Perfect%20-%20Ed%20Sheeran.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="footer">
+    🌸 Every second with you is a moment worth celebrating. Happy birthday again, my love!
+  </div>
+
+  <script>
+    const countdownEl = document.getElementById('countdown');
+    const targetDate = new Date('2025-07-27T23:59:59').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const gap = targetDate - now;
+
+      const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((gap % (1000 * 60)) / 1000);
+
+      if (gap > 0) {
+        countdownEl.innerHTML = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s left until your magical birthday ends!`;
+      } else {
+        countdownEl.innerHTML = `🎉 Happy Birthday Night! Love you always ❤️`;
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
